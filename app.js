@@ -28,12 +28,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-if (app.get('env') === 'development') {
+/*if (app.get('env') === 'development') {
     require('./config/development');
 } else {
     require('./config/production');
-}
-
+}*/
+require('./config/production');
 /*config = {
  db: 7,
  host: process.env.REDIS_HOST,
